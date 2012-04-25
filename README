@@ -4,6 +4,6 @@ To convert txt file use strfile:
 strfile vimtips vimtips.dat
 
 To have a tips when you open a file:
-au VimEnter * echomsg system('/usr/bin/fortune vimtweets')
+au VimEnter * echomsg system('/usr/bin/fortune vimtips')
     or
-echomsg system('/usr/bin/fortune vimtweets')
+echomsg system('/usr/bin/fortune vimtips')
