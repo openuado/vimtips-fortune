@@ -3,3 +3,7 @@ vimtips is a project with vimtips to use with fortune software.
 To convert txt file use strfile:
 strfile vimtips vimtips.dat
 
+To have a tips when you open a file:
+au VimEnter * echomsg system('/usr/bin/fortune vimtweets')
+    or
+echomsg system('/usr/bin/fortune vimtweets')
