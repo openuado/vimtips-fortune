@@ -10,7 +10,7 @@ fortune scan (/usr/share/fortunes/ or /usr/share/games/fortunes/).
 
 To have a tips when you launch vim, insert the next line in your vimrc :
     au VimEnter * echomsg system('/usr/bin/fortune vimtips')
-    
+
 or if you want a tips when you are in vim :
     :echomsg system('/usr/bin/fortune vimtips')
 
