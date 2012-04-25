@@ -4,7 +4,8 @@ The vimtips file is a text file with the format of fortune command.
 You have to generate a index file like this :
 
     $ strfile vimtips vimtips.dat
-and then copy the two files (vimtips ans vimtips.dat) to a directory which
+
+and then copy the two files (vimtips ans vimtips.dat) to a directory that
 fortune scan (/usr/share/fortunes/ or /usr/share/games/fortunes/).
 
 To have a tips when you launch vim, insert the next line in your vimrc :
