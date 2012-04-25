@@ -1,9 +1,17 @@
 vimtips is a project with vimtips to use with fortune software.
 
-To convert txt file use strfile:
-strfile vimtips vimtips.dat
+The vimtips file is a text file with the format of fortune command.
+You have to generate a index file like this :
 
-To have a tips when you open a file:
-au VimEnter * echomsg system('/usr/bin/fortune vimtips')
-    or
-echomsg system('/usr/bin/fortune vimtips')
+    $ strfile vimtips vimtips.dat
+and then copy the two files (vimtips ans vimtips.dat) to a directory which
+fortune scan (/usr/share/fortunes/ or /usr/share/games/fortunes/).
+
+To have a tips when you launch vim, insert the next line in your vimrc :
+    au VimEnter * echomsg system('/usr/bin/fortune vimtips')
+    
+or if you want a tips when you are in vim :
+    :echomsg system('/usr/bin/fortune vimtips')
+
+Notice, if you are a debian user, the fortune is located in /usr/games/,
+not in /usr/bin/.
