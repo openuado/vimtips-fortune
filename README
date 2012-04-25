@@ -1,0 +1,5 @@
+vimtips is a project with vimtips to use with fortune software.
+
+To convert txt file use strfile:
+strfile vimtips vimtips.dat
+
