@@ -1,4 +1,4 @@
-vimtips is a project with vimtips to use with fortune software.
+vimtips is a project to use fortune software to view vimtips.
 
 The vimtips file is a text file with the format of fortune command.
 You have to generate a index file like this :
