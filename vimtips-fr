@@ -1,0 +1,5 @@
+CTRL-w s CTRL-w T ouvre le buffer courant dans un nouveau tab
+%
+%s/^\n// pour effacer toutes les lignes vide
+%
+:w !sudo tee % utilise sudo pour sauver le fichier ouvert ( lorsqu'on a oublié d'ouvrir le fichier avec sudo vim /path/to/file )
