@@ -195,3 +195,10 @@ ggguG will lower case the entire file (also known as the Jerry Yang treatment).
 :g/search_term/# display each line containing 'search_term' with line numbers.
 %
 :%s/<!--\_.\{-}-->// will delete HTML comments, potentially spanning multiple lines.
+%
+'. jumps to the last modified line. `. jumps to the exact position of last modification
+%
+[I (that's bracket open, capital i) show lines containing the word under the cursor.
+%
+:%s/\\/\//g replaces all backslashes with forward slashes
+
