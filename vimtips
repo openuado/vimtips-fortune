@@ -1,4 +1,4 @@
-zz to center the cursor vertically on your screen. Useful when you 250Gzz, for instance.
+zz to center the cursor vertically on your screen. useful when you 250gzz, for instance.
 %
 CTRL-w | and CTRL-W _ maximize your current split vertically and horizontally, respectively. CTRL-W = equalizes 'em.
 %
@@ -14,7 +14,7 @@ CTRL-w K will switch vertical split into horizontal, CTRL-w H will switch a hori
 %
 :w !sudo tee % will use sudo to write the open file (have you ever forgotten to `sudo vim /path/to/file`?)
 %
-K runs a prgrm to lookup the keyword under the cursor. If writing C, it runs man. In Ruby, it (should) run ri, Python (perhaps) pydoc.
+K runs a program to lookup the keyword under the cursor. If writing C, it runs man. In Ruby, it (should) run ri, Python (perhaps) pydoc.
 %
 Edit and encrypt a file: vim -x filename
 %
@@ -46,8 +46,7 @@ From a command-line, vim scp://username@host//path/to/file to edit a remote file
 %
 %s/<C-R>a/bar/g will place the contents of register 'a' in the search, and replace it with 'bar'.
 %
-Edit a command output in Vim as a file:
-$ command | vim -
+Edit a command output in Vim as a file: $ command | vim -
 %
 ggVG= will auto-format the entire document
 %
@@ -85,7 +84,7 @@ After performing an undo, you can navigate through the changes using g- and g+. 
 %
 You probably know that 'u' is undo. Do you know that Ctrl-R is redo?
 %
-ci{ â€“ change text inside {} block. Also see di{, yi{, ci( etc.
+ci{  change text inside {} block. Also see di{, yi{, ci( etc.
 %
 :set autochdir instead of :lcd %:p:h in your vimrc to change directories upon opening a file.
 %
@@ -128,7 +127,7 @@ noremap ' ` and noremap ` ' to make marks easier to navigate. Now ` is easier to
 %
 Count the number of occurences of a word in a file with :%s/<word>//gn
 %
-:set foldmethod=syntax to make editing long files of code much easier.  zo to open a fold.  zc to close it.  See more
+:set foldmethod=syntax to make editing long files of code much easier.  zo to open a fold.  zc to close it.  See more http://is.gd/9clX
 %
 Need to edit and run a previous command?  q: then find the command, edit it, and Enter to execute the line.
 %
@@ -146,7 +145,7 @@ gq{movement} to wrap text, or just gq while in visual mode. gqap will format the
 %
 :match ErrorMsg '\%>80v.\+' uses matching to highlight lines longer than 80 columns.
 %
-:%s/\ r//g to remove all those nasty ^M from a file, or :%s/\ r$//g for only at the end of a line.
+:%s/\r//g to remove all those nasty ^M from a file, or :%s/\r$//g for only at the end of a line.
 %
 % matches opening and closing chars (){}[], and with matchit.vim, def/end, HTML tags, etc. as well!
 %
@@ -201,4 +200,14 @@ ggguG will lower case the entire file (also known as the Jerry Yang treatment).
 [I (that's bracket open, capital i) show lines containing the word under the cursor.
 %
 :%s/\\/\//g replaces all backslashes with forward slashes
-
+%
+:vimgrep /stext/ **/*.txt | :copen searches for stext recursively in *.txt files and show results in separate window
+%
+ysiw' to surround current word with ',cs' {changes word to {word}} using the surround plugin: http://t.co/7QnLiwP3
+%
+use \v in your regex to set the mode to 'very magic' and avoid confusion (:h \v for more info) http://t.co/KWtRFNPI
+%
+in gvim, change the cursor depending on what mode you are (normal, insert, etc...) http://is.gd/9dq0
+%
+In visual mode, use " to surround the selected text with " using the surround plugin http://is.gd/fpwJQ
+%
