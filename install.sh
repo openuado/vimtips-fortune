@@ -1,5 +1,7 @@
 #!/bin/sh
 
+#Written by Natal Ngétal and Gilles Crèvecœur
+
 function check_user {
     local ROOT_UID=0
 
