@@ -10,9 +10,9 @@ function check_user {
     fi
 }
 
-
 function debian_install {
-    if [ ! -e '/usr/games/fortune' ]
+    local bin=$(which fortune)
+    if [ ! $bin ]
     then
         echo 'Install fortune software'
         apt-get install fortune
@@ -23,7 +23,8 @@ function debian_install {
 }
 
 function general_intall {
-    if [ ! -e '/usr/bin/fortune' ]
+    local bin=$(which fortune)
+    if [ ! $bin ]
     then
         echo 'Need fortune software to work'
         exit
