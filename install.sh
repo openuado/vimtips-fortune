@@ -2,21 +2,22 @@
 
 #Written by Natal Ngétal and Gilles Crèvecœur
 
-function check_user {
-    local ROOT_UID=0
-
-    if [ "$UID" -ne "$ROOT_UID" ]
+check_user ()
+{
+    my_name="$(whoami)" 
+    if [ "$my_name" != "root" ]
     then
         echo "You must be root"
         exit 0
     fi
 }
 
-function debian_install {
-    local bin=$(which fortune)
-    local path_fortune='/usr/local/share/games/fortunes/'
-
-    if [ ! $bin ]
+debian_install ()
+{
+    bin="$(which fortune)"
+    path_fortune='/usr/local/share/games/fortunes/'
+    
+    if [ ! -x "$bin" ]
     then
         echo 'Install fortune software'
         apt-get install fortune
@@ -24,7 +25,7 @@ function debian_install {
 
     strfile vimtips vimtips.dat
 
-    if [ ! -d $path_fortune ]
+    if [ ! -d "$path_fortune" ]
     then
         mkdir -p $path_fortune
     fi
@@ -32,11 +33,12 @@ function debian_install {
     cp vimtips vimtips.dat $path_fortune
 }
 
-function general_intall {
-    local bin=$(which fortune)
-    locat path_fortune='/usr/local/share/fortunes/'
+general_intall ()
+{
+    bin="$(which fortune)"
+    path_fortune='/usr/local/share/fortunes/'
 
-    if [ ! $bin ]
+    if [ ! -x "$bin" ]
     then
         echo 'Need fortune software to work'
         exit
@@ -44,7 +46,7 @@ function general_intall {
 
     strfile vimtips vimtips.dat
 
-    if [ ! -d $path_fortune ]
+    if [ ! -d "$path_fortune" ]
     then
         mkdir -p $path_fortune
     fi
