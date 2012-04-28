@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 function check_user {
     local ROOT_UID=0
