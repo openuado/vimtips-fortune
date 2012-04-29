@@ -52,8 +52,6 @@ ggVG= will auto-format the entire document
 %
 '0 opens the last modified file ('1 '2 '3 works too)
 %
-[I (big i) shows lines containing the word under the cursor
-%
 In insert mode do Ctrl+r=53+17<Enter>. This way you can do some calcs with vim.
 %
 "_d will delete the selection without adding it to the yanked stack (sending it to the black hole register).
@@ -210,4 +208,32 @@ use \v in your regex to set the mode to 'very magic' and avoid confusion (:h \v 
 in gvim, change the cursor depending on what mode you are (normal, insert, etc...) http://is.gd/9dq0
 %
 In visual mode, use " to surround the selected text with " using the surround plugin http://is.gd/fpwJQ
+%
+:tabo closes all tabs execpt the current one.
+%
+<C-U> / <C-D> move the cursor up/down half a page (also handy :set nosol)
+%
+:set titlestring=%f set the file name as the terminal title.
+%
+p / P paste after/before the cursor. Handy when inserting lines.
+%
+daw/caw deletes/changes the word under the cursor.
+%
+vim -d file1 file2 shows the differences between two files.
+%
+:set smartcase case sensitive if search contains an uppercase character and ignorecase is on.
+%
+:sh or :shell to open a console (then exit to come back to vim).
+%
+= : re-indent (e.g. == to re-indent the current line).
+%
+:%y c copies the entire buffer into register c. "cp inserts the content of register c in the current document.
+%
+ctrl-v blockwise visual mode (rectangular selection).
+%
+I/A switch to insert mode before/after the current line.
+%
+o/O insert a new line after/before the current line and switch to insert mode.
+%
+I/A in visual blockwise mode (ctrl-v) insert some text at the star/end of each line of the block text.
 %
