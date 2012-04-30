@@ -3,3 +3,15 @@ CTRL-w s CTRL-w T ouvre le buffer courant dans un nouveau tab
 %s/^\n// pour effacer toutes les lignes vide
 %
 :w !sudo tee % utilise sudo pour sauver le fichier ouvert ( lorsqu'on a oublié d'ouvrir le fichier avec sudo vim /path/to/file )
+%
+Depuis la ligne de commande, vim scp://utilisateur@host//chemin/du/fichier pour editer un fichier distant en local.
+%
+Editer et crypte un fichier: vim -x nomdufichier
+%
+:g/_pattern_/s/^/#/g commente toutes les lignes contenant _pattern_ (si '#' et le caractère de commentaire)
+%
+CTRL-w K swtich un split vertical en horizontal, CTRL-w H swtich un split horizontal en vertical
+%
+/<fred>/ cherche fred, mais pas alfred ou frederick
+%
+/joe/e cherche joe et le place le curseur à la fin du mot trouvé.
