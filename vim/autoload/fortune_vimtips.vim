@@ -1,4 +1,4 @@
-function fortune#viewtips()
+function fortune_vimtips#viewtips()
     let vimtips = system('fortune vimtips')
 
     new

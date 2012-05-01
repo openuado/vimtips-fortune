@@ -4,5 +4,5 @@
 " Author:        Natal Ngétal
 " =============================================================================
 
-call fortune#viewtips()
-com! Fortune call fortune#viewtips()
+call fortune_vimtips#viewtips()
+com! Fortune call fortune_vimtips#viewtips()
