@@ -4,5 +4,7 @@
 " Author:        Natal Ngétal
 " =============================================================================
 
-call fortune_vimtips#viewtips()
+if &diff == 0
+    call fortune_vimtips#viewtips()
+endif
 com! Fortune call fortune_vimtips#viewtips()
