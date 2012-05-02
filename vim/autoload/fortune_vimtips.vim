@@ -1,7 +1,8 @@
 function fortune_vimtips#viewtips()
-    let vimtips = system('fortune vimtips')
-    let len = strlen(vimtips)
-    let vimtips = strpart(vimtips,0, len-1)
+    let vimtips        = system('fortune vimtips')
+    let len            = strlen(vimtips)
+    let vimtips_result = strpart(vimtips,0, len-1)
+
     new
     resize 3
     silent exec "edit $HOME/"."vimtips"
@@ -11,5 +12,5 @@ function fortune_vimtips#viewtips()
     setl nobuflisted
 
     silent exec append(0, 'Did you know ?')
-    silent exec append(1, vimtips)
+    silent exec append(1, vimtips_result)
 endfunction
