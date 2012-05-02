@@ -91,7 +91,7 @@ ci{  change text inside {} block. Also see di{, yi{, ci( etc.
 to use gvim to edit your git messages set git's core editor as follows:
 git config --global core.editor "gvim --nofork"
 %
-ci " inside a " " will erase everything between "" and place you in insertion mode.
+ci" inside a " " will erase everything between "" and place you in insertion mode.
 %
 :set guifont=* in gvim or MacVim to get a font selection dialog. Useful while giving presentations.
 %
