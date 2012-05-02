@@ -4,7 +4,7 @@
 " Author:        Natal Ngétal
 " =============================================================================
 
-if exists("g:loaded_fortune_vimtips")
+if exists("g:loaded_fortune_vimtips") || &cp
   finish
 endif
 let g:loaded_fortune_vimtips = 1
