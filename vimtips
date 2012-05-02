@@ -237,3 +237,5 @@ o/O insert a new line after/before the current line and switch to insert mode.
 %
 I/A in visual blockwise mode (ctrl-v) insert some text at the star/end of each line of the block text.
 %
+Need to edit a file in hex ? :help hex-editing gives you the manual.
+
