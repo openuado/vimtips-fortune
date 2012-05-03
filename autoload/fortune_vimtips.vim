@@ -1,6 +1,6 @@
 function! fortune_vimtips#viewtips()
     let win_nr = bufwinnr("vimtips.~")  
-    let win_restore = -1
+    let win_restore = winnr()
     
     if win_nr == -1
         new
@@ -11,7 +11,6 @@ function! fortune_vimtips#viewtips()
         set bufhidden=hide
         setl nobuflisted
     else
-        let win_restore = winnr()
         silent exec win_nr . "wincmd w"
     endif    
 
@@ -19,8 +18,6 @@ function! fortune_vimtips#viewtips()
     silent exec "read! fortune vimtips"
     call cursor(1,1)
     
-    if win_restore != -1
-        silent exec win_restore . "wincmd w"
-    endif
+    silent exec win_restore . "wincmd w"
 
 endfunction
