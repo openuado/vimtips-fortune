@@ -17,7 +17,7 @@ if s:running_windows
 endif
 
 if &diff == 0
-    call fortune_vimtips#viewtips()
+    au VIMEnter * call fortune_vimtips#viewtips()
 endif
 
 com! Fortune call fortune_vimtips#viewtips()
