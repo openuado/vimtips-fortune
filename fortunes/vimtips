@@ -72,7 +72,7 @@ g; will cycle through your recent changes (or g, to go in reverse).
 %
 :%s#<[^>]\+>##g will remove HTML tags, leaving the text. (non-greedy)
 %
-:%s#.*(hours).*#1# will delete everything on a line except for the string 'hours'.
+:%s#.*\(hours\).*#\1# will delete everything on a line except for the string 'hours'.
 %
 "2p will put the second to last thing yanked, "3p will put the third to last, etc.
 %
