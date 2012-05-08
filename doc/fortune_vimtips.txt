@@ -1,0 +1,44 @@
+fortune-vimtips.txt Open tips  when you launch vim.
+
+Author: Natal Ngétal (Hobbestigrou)   fortune-vimtips-author
+License: Same terms as Vim itself (see license)
+
+CONTENTS                                        fortune-vimtips-contents
+
+1. Introduction                 fortune-vimtips-intro
+2. Requirements                 fortune-vimtips-requirements
+3. Authors                      fortune-vimtips-authors
+4. History                      fortune-vimtips-history
+
+INTRODUCTION                                    fortune-vimtips-intro
+
+This plugin is a front for fortune software. Be used to display vimtips.
+
+REQUIREMENTS                                    fortune-vimtips-requirements
+
+The plugin requires fortune software installed.
+
+AUTHORS                                         fortune-vimtips-authors
+
+Fortune-vimtips is written and maintained by Natal Ngétal (Hobbestigrou).
+Others contributors that have submitted patches include (in alphabetical order):
+
+    Gilles Crèvecœur (enikar)
+    z3bra initial idea
+
+HISTORY                                          fortune-vimtips-history
+
+0.2 ( 06 May 2012 )
+
+- Restore the original window in all case.
+- Save and restore the window when using the :Fortune
+- Fix avoid multiple sources.
+- Suppress the nul character add by vim at the end of the tip.
+- Add a validation to detect windows environnement
+
+0.1 ( 01 May 2012 )
+
+- initial release
+
+------------------------------------------------------------------------
+vim:tw=78:ft=help:
