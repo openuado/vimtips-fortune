@@ -7,8 +7,9 @@ CONTENTS                                        fortune-vimtips-contents
 
 1. Introduction                 fortune-vimtips-intro
 2. Requirements                 fortune-vimtips-requirements
-3. Authors                      fortune-vimtips-authors
-4. History                      fortune-vimtips-history
+3. Commands                     fortune-vimtips-commands
+4. Authors                      fortune-vimtips-authors
+5. History                      fortune-vimtips-history
 
 INTRODUCTION                                    fortune-vimtips-intro
 
@@ -17,6 +18,11 @@ This plugin is a front for fortune software. Be used to display vimtips.
 REQUIREMENTS                                    fortune-vimtips-requirements
 
 The plugin requires fortune software installed.
+
+COMMANDS                                        fortune-vimtips-commands
+
+:Fortune
+    Display a tips in a new buffer.
 
 AUTHORS                                         fortune-vimtips-authors
 
