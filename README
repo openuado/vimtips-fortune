@@ -1,18 +1,10 @@
 vimtips is a project to use fortune software to view vimtips.
 
 The vimtips file is a text file with the format of fortune command.
-You have to generate a index file like this :
+To generate a index file and install:
 
-    $ strfile vimtips vimtips.dat
+    $ cd fortunes
+    $ sudo ./install.sh
 
-and then copy the two files (vimtips ans vimtips.dat) to a directory that
-fortune scan (/usr/share/fortunes/ or /usr/share/games/fortunes/).
+And install the plugin in your .vim directory.
 
-To have a tips when you launch vim, insert the next line in your vimrc :
-    au VimEnter * echomsg system('/usr/bin/fortune vimtips')
-
-or if you want a tips when you are in vim :
-    :echomsg system('/usr/bin/fortune vimtips')
-
-Notice, if you are a debian user, the fortune is located in /usr/games/,
-not in /usr/bin/.
