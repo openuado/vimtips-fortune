@@ -9,6 +9,10 @@ if exists("g:loaded_fortune_vimtips") || &cp
 endif
 let g:loaded_fortune_vimtips = 1
 
+if !exists('g:fortune_vimtips_auto_display')
+    let g:fortune_vimtips_auto_display = 1
+endif
+
 let s:running_windows = has("win16") || has("win32") || has("win64")
 
 if s:running_windows
@@ -16,7 +20,7 @@ if s:running_windows
     finish
 endif
 
-if &diff == 0
+if &diff == 0 && g:fortune_vimtips_auto_display
     au VIMEnter * call fortune_vimtips#viewtips()
 endif
 
