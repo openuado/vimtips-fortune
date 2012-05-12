@@ -155,7 +155,7 @@ gq{movement} to wrap text, or just gq while in visual mode. gqap will format the
 %
 gf will open the file under the cursor.  (Killer feature.)
 %
-Ctrl-a, Ctrl-x will increment and decrement, respectively, the number under the cursor.
+Ctrl-a, Ctrl-x will increment and decrement, respectively, the number under the cursor. May be precede by a count.
 %
 :scriptnames will list all plugins and _vimrcs loaded.
 %
@@ -238,4 +238,32 @@ o/O insert a new line after/before the current line and switch to insert mode.
 I/A in visual blockwise mode (ctrl-v) insert some text at the star/end of each line of the block text.
 %
 Need to edit a file in hex ? :help hex-editing gives you the manual.
+%
+Ctrl + o : Execute a command while in insert mode, then go back to insert mode. e.g. ctrl+o, p; paste without exiting insert mode
+%
+ctrl-r x (insert mode): insert the contents of buffer x. For example: "ctrl-r +" would insert the contents of the clipboard.
+%
+ctrl-r ctrl-w: Pull the word under the cursor in a : command. eg. :s/ctrl-r ctrl-w/foo/g
+%
+':%y c': yank entire file into register c. '"cp': Paste contents of c into document.
+%
+a/A : append at the cursor position / at the end of the line (enters insert mode)
+%
+ctrl-x ctrl-f (insert mode): complete with the file names in the current directory (ctrl-p/n to navigate through the candidates)
+%
+set mouse=a - enable mouse in terminal (selection, scroll, window resizing, ...).
+%
+J: join two lines
+%
+gg/G: go to start/end of file.
+%
+Ctrl-y (insert mode): insert character which is on the line above cursor. example: handy to initialize a structure.
+%
+:set nowrap - disable line wrapping
+%
+vim -p <files> - load all files listed in separate tabs. e.g. vim -p *.c
+%
+vmap out "zdmzO#if 0<ESC>"zp'zi#endif<CR><ESC> - macro to comment out a block of code using #if 0
+%
+<CTRT-W>v == :vsplit like <CTRL-w>s == :split
 
