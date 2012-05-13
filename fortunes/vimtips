@@ -266,4 +266,105 @@ vim -p <files> - load all files listed in separate tabs. e.g. vim -p *.c
 vmap out "zdmzO#if 0<ESC>"zp'zi#endif<CR><ESC> - macro to comment out a block of code using #if 0
 %
 <CTRT-W>v == :vsplit like <CTRL-w>s == :split
+%
+If gvim is started from a terminal it opens at the same width as the terminal. To prevent this, add "set columns=80" to ~/.vimrc
+%
+Prefixing G or gg (command mode) with a number will cause vim to jump to that line number.
+%
+set showbreak - set characters to prefix wrapped lines with. e.g. ":set showbreak=+++\ " (white space must be escaped)
+%
+When editing multiple files (e.g. vim *.c), use :n to move to the next file and :N to move to the previous file. :ar shows the list of files
+%
+:split - split the current window in two
+%
+vim --remote <file> - open a file in an existing vim session
+%
+A - enter insert mode at the end of the line (Append); I - insert before the first non-blank of the line
+%
+%< - resolves the current filename without extension. e.g. :e %<.h - open the header file for the current file
+%
+:set softtabstop <n> - set the number of spaces to insert when using the tab key (converted to tabs and spaces if expandtab is off).
+%
+:set expandtab - use spaces rather than the tab character to insert a tab.
+%
+:set guioptions - set various GUI vim options. e.g. to remove the menubar and toolbar, :set guioptions-=Tm
+%
+"vim - " - start vim and read from standard input. e.g. with syntax enabled, get a coloured diff from git: git diff | vim -
+%
+set mousemodel=popup - enable a popup menu on right click in GUI vim
+%
+r!cat - reads into the buffer from stdin and avoids using :set paste (use ctrl-d to finish)
+%
+:set title - display info in terminal title. Add let &titleold=getcwd() to .vimrc to set it to something useful on quit
+%
+:set pastetoggle=key - specify a key sequence that toggles the paste option, e.g. set pastetoggle=<F2>
+%
+:set paste - allows you to paste from the clipboard correctly, especially when vim is running in a terminal
+%
+substitute flag 'n' - count how many substitutions would be made, but don't actually make any 
+%
+set wildmenu - enhanced filename completion. left and right navigates matches; up and down navigates directories
+%
+zt, zz, zb: scroll so that the current position of the cursor is moved to the top, middle or bottom of the screen
+%
+[range]sort - sort the lines in the [range], or all lines if [range] is not given. e.g. :'<,'>sort - sort the current visual selection
+%
+%:exec ":new ".(substitute(expand("%"), ".c$", ".h", "")) - open the associated .h file for the current .c file in a new window; more concisely :new %:p:r.h
+%
+noh - stop highlighting the current search (if 'hlsearch' is enabled). Highlighting is automatically restored for the next search.
+%
+when substituting, \u makes just first character upper (like \l for lower) and \U is upper equivalent for \L
+%
+:retab <ts> - convert strings of white-space containing <Tab> with new strings using the <ts> value if given or current value of 'tabstop'
+%
+ctrl-v u <hex code> - enter a unicode character in insert mode
+%
+:set laststatus=2 - always show the status line (0 = never, 1 = (default) only if there are two or more windows, 2 = always)
+%
+b - go back a word (opposite of w)
+%
+} - move to the next blank line ( { - move to previous blank line)
+%
+s - delete characters and start insert mode (s stands for Substitute). e.g. 3s - delete three characters and start insert mode.
+%
+0 - Move to the first character of the line
+%
+:set columns=X - set the width of the window to X columns. For GUI vim, this is limited to the size of the screen
+%
+:only - close all windows except the current one (alternatives: ctrl-w ctrl-o or :on)
+%
+ctrl-<pagedown> / ctrl-<pageup> - switch to next/previous tab. (alternatives: gt/gT, :tabn/:tabp, etc)
+%
+:tabe <filename> - open <filename> in a new tab (same as :tabedit and :tabnew)
+%
+Ctrl-T and Ctrl-D - indent and un-indent the current line in insert mode
+%
+vim +<num> - start vim and place the cursor on line <lnum>. If lnum is not specified, start at the end of the file
+%
+gj, gk (or g<Up> g<Down>) - move up or down a display line (makes a difference for wrapped lines)
+%
+>{motion} and <{motion} - (normal mode) increase/decrease the current indent. e.g. << - decrease the indent of the current line
+%
+"+ and "* - clipboard and current selection registers under X. e.g. "+p to paste from the clipboard and "+y to copy to the clipboard
+%
+:r!<cmd> - insert the result of <cmd> into the current buffer at the cursor. e.g. :r!ls *.h
+%
+& - re-run last :s command (&& to remember flags)
+%
+set wildignore - ignore matching files when using tab complete on filenames. e.g. :set wildignore=*.o,*.lo
+%
+CTRL-V <tab> - in insert mode, enters a real tab character, disregarding tab and indent options
+%
+CTRL-U/CTRL-D - scroll up/down, moving the cursor the same number of lines if possible (unlike <PageUp>/<PageDown>)
+%
+:set cursorline - Highlight the current line under the cursor
+%
+:set showcmd - show the number of lines/chacters in a visual selection
+%
+:x is like ":wq", but write only when changes have been made
+%
+ctrl-b / ctrl-f : page up / page down
+%
+ctrl-clic / ctrl-t : go to symbol definition (= ctrl-]) (using tags) and back. You can use "make tags" autotooled projects to create tags
+
 
