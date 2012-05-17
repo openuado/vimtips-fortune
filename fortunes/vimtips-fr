@@ -15,3 +15,9 @@ CTRL-w K swtich un split vertical en horizontal, CTRL-w H swtich un split horizo
 /<fred>/ cherche fred, mais pas alfred ou frederick
 %
 /joe/e cherche joe et le place le curseur à la fin du mot trouvé.
+%
+Besoin d'éditer un fichier en héxadecimal ? :help hex-editing fournit le manuel.
+%
+:sh ou :shell ouvrir une console et retourne dans vim à la sortie.
+%
+:tabo ferme tous les onglets à part l'onglet courant.
