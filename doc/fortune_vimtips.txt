@@ -55,6 +55,7 @@ HISTORY                                          fortune-vimtips-history
 - Add documentation file.
 - Correct a mistake in a :s command.
 - Minor change to resolve a bug, when starting vim in gui mode.
+- New tips.
 
 0.2 ( 06 May 2012 )
 
