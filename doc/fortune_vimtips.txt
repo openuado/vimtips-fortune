@@ -31,7 +31,7 @@ Overview:
                                      *g:fortune_vimtips_auto_display*
     |g:fortune_vimtips_auto_display|   boolean ( default 1 )
 
-        Don't auto display tips in a new buffer
+        Auto display tips in a new buffer when launch vim
 
 COMMANDS                                        fortune-vimtips-commands
 
@@ -48,6 +48,13 @@ Others contributors that have submitted patches include (in alphabetical order):
     Baptiste Fontaine author of the orginal vimtweets file
 
 HISTORY                                          fortune-vimtips-history
+
+0.3 ( 23 May 2012 )
+
+- Add new option auto_display.
+- Add documentation file.
+- Correct a mistake in a :s command.
+- Minor change to resolve a bug, when starting vim in gui mode.
 
 0.2 ( 06 May 2012 )
 
