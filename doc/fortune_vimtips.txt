@@ -33,6 +33,14 @@ Overview:
 
         Auto display tips in a new buffer when launch vim
 
+                                     *g:fortune_vimtips_file*
+    |g:fortune_vimtips_file|   string ( default "vimtips" )
+
+        File from which the tips are taken. Included in the plugin are
+        "vimtips" and "vimtips-fr", you can add more files of the same format
+        (fortunes separated by lines containing a % character only) in the
+        fortunes subdirectory of the plugin.
+
 COMMANDS                                        fortune-vimtips-commands
 
 :Fortune
