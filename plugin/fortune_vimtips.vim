@@ -13,6 +13,10 @@ if !exists('g:fortune_vimtips_auto_display')
     let g:fortune_vimtips_auto_display = 1
 endif
 
+if !exists('g:fortune_vimtips_file')
+    let g:fortune_vimtips_file = "vimtips"
+endif
+
 if &diff == 0 && g:fortune_vimtips_auto_display
     au VIMEnter * call fortune_vimtips#viewtips()
 endif
