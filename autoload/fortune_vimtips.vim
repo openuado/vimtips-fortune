@@ -7,10 +7,10 @@ let s:fortunes = split(s:fortunestr, "\n%\n")
 
 function! fortune_vimtips#viewtips()
     let win_nr = bufwinnr("vimtips.~")
-    let win_restore = winnr()
 
     if win_nr == -1
         new
+        let win_restore = winnr("#")
         resize 3
         silent exec "edit $HOME/"."vimtips.~"
     " Avoid warning for editing the dummy file twice
@@ -18,6 +18,7 @@ function! fortune_vimtips#viewtips()
         set bufhidden=hide
         setl nobuflisted
     else
+        let win_restore = winnr()
         silent exec win_nr . "wincmd w"
     endif
 
