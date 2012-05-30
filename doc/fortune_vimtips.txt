@@ -52,6 +52,7 @@ Fortune-vimtips is written and maintained by Natal Ngétal (Hobbestigrou).
 Others contributors that have submitted patches include (in alphabetical order):
 
     Gilles Crèvecœur (enikar)
+    Sylvain Soliman  (soli)
     z3bra initial idea
     Baptiste Fontaine author of the orginal vimtweets file
 
