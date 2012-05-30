@@ -53,6 +53,13 @@ Others contributors that have submitted patches include (in alphabetical order):
 
 HISTORY                                          fortune-vimtips-history
 
+0.4 ( 30 may 2012 )
+
+- Remove install script
+- Handle window focus restore even if original winnr changed
+- Add configuration variable
+- First version not relying on an external fortune program
+
 0.3 ( 23 May 2012 )
 
 - Add new option auto_display.
