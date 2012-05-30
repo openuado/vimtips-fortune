@@ -6,19 +6,14 @@ License: Same terms as Vim itself (see license)
 CONTENTS                                        fortune-vimtips-contents
 
 1. Introduction                 fortune-vimtips-intro
-2. Requirements                 fortune-vimtips-requirements
-3. Options                      fortune-vimtips-options
-4. Commands                     fortune-vimtips-commands
-5. Authors                      fortune-vimtips-authors
-6. History                      fortune-vimtips-history
+2. Options                      fortune-vimtips-options
+3. Commands                     fortune-vimtips-commands
+4. Authors                      fortune-vimtips-authors
+5. History                      fortune-vimtips-history
 
 INTRODUCTION                                    fortune-vimtips-intro
 
-This plugin is a front for fortune software. Be used to display vimtips.
-
-REQUIREMENTS                                    fortune-vimtips-requirements
-
-The plugin requires fortune software installed.
+This plugin is a use the format of fortunes software. Be used to display vimtips.
 
 OPTIONS                                         fortune-vimtips-options
 
