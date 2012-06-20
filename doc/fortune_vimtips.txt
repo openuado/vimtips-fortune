@@ -48,7 +48,7 @@ Others contributors that have submitted patches include (in alphabetical order):
 
     Gilles Crèvecœur (enikar)
     Sylvain Soliman  (soli)
-    z3bra initial idea
+    Willy Goiffon (z3bra) initial idea
     Baptiste Fontaine author of the orginal vimtweets file
 
 HISTORY                                          fortune-vimtips-history
