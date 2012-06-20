@@ -48,8 +48,10 @@ Others contributors that have submitted patches include (in alphabetical order):
 
     Gilles Crèvecœur (enikar)
     Sylvain Soliman  (soli)
-    Willy Goiffon (z3bra) initial idea
+
+No code but give the idea:
     Baptiste Fontaine author of the orginal vimtweets file
+    Willy Goiffon (z3bra) initial idea of the plugin
 
 HISTORY                                          fortune-vimtips-history
 
