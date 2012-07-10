@@ -6,6 +6,9 @@ let s:fortunestr = join(s:fortunes, "\n")
 let s:fortunes = split(s:fortunestr, "\n%\n")
 
 function! fortune_vimtips#viewtips()
+    " Add a map to close more easy the window
+    silent! nmap <unique> <silent> <Leader>o :only<CR>
+
     let win_nr = bufwinnr("vimtips.~")
 
     if win_nr == -1
@@ -28,5 +31,4 @@ function! fortune_vimtips#viewtips()
     call cursor(1,1)
 
     silent exec win_restore . "wincmd w"
-
 endfunction
