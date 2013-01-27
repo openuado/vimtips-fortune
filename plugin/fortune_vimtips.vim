@@ -17,7 +17,17 @@ if !exists('g:fortune_vimtips_file')
     let g:fortune_vimtips_file = "vimtips"
 endif
 
-if &diff == 0 && g:fortune_vimtips_auto_display
+if !exists('g:fortune_vimtips_display_in_tooltip')
+    let g:fortune_vimtips_display_in_tooltip = 0
+endif
+
+if &diff == 0 && g:fortune_vimtips_auto_display && !has("gui_running")
+    au VIMEnter * call fortune_vimtips#viewtips()
+endif
+
+if has("gui_running") && g:fortune_vimtips_display_in_tooltip == 1
+    au GUIEnter * set guitabtooltip=%!fortune_vimtips#tooltipviewtips()
+else
     au VIMEnter * call fortune_vimtips#viewtips()
 endif
 
