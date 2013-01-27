@@ -18,23 +18,28 @@ This plugin is a use the format of fortunes software. Be used to display vimtips
 OPTIONS                                         fortune-vimtips-options
 
 Overview:
-                                     *g:loaded_fortune_vimtips*
-    |g:loaded_fortune_vimtips|         boolean ( default 1 )
+                                              *g:loaded_fortune_vimtips*
+    |g:loaded_fortune_vimtips|                  boolean ( default 1 )
 
         Use this to disable the plugin completely
 
-                                     *g:fortune_vimtips_auto_display*
-    |g:fortune_vimtips_auto_display|   boolean ( default 1 )
+                                              *g:fortune_vimtips_auto_display*
+    |g:fortune_vimtips_auto_display|            boolean ( default 1 )
 
         Auto display tips in a new buffer when launch vim
 
-                                     *g:fortune_vimtips_file*
-    |g:fortune_vimtips_file|   string ( default "vimtips" )
+                                              *g:fortune_vimtips_file*
+    |g:fortune_vimtips_file|                    string ( default "vimtips" )
 
         File from which the tips are taken. Included in the plugin are
         "vimtips" and "vimtips-fr", you can add more files of the same format
         (fortunes separated by lines containing a % character only) in the
         fortunes subdirectory of the plugin.
+
+                                              *g:fortune_vimtips_display_in_tooltip*
+    |g:fortune_vimtips_display_in_tooltip|      boolean ( default 0 )
+
+        Use this option to display the tip on a gvim tooltip.
 
 COMMANDS                                        fortune-vimtips-commands
 
@@ -54,6 +59,9 @@ No code but give the idea:
     Willy Goiffon (z3bra) initial idea of the plugin
 
 HISTORY                                          fortune-vimtips-history
+
+0.5 ( 27 jan 2013 )
+- Add a new option to display the tip on a gvim tooltip
 
 0.4 ( 30 may 2012 )
 
