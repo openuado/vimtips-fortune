@@ -26,8 +26,7 @@ function! fortune_vimtips#viewtips()
     endif
 
     silent exec append(0, 'Did you know ?')
-    let fortune = GetFortune()
-    silent exec append(1, split(get(s:fortunes, fortune), "\n"))
+    silent exec append(1, split(get(s:fortunes, GetFortune()), "\n"))
     call cursor(1,1)
 
     silent exec win_restore . "wincmd w"
