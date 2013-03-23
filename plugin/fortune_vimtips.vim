@@ -28,7 +28,7 @@ endif
 if has("gui_running") && g:fortune_vimtips_display_in_tooltip == 1
     au GUIEnter * set guitabtooltip=%!fortune_vimtips#tooltipviewtips()
 else
-    au VIMEnter * call fortune_vimtips#viewtips()
+    au GUIEnter * call fortune_vimtips#viewtips()
 endif
 
 com! Fortune call fortune_vimtips#viewtips()
