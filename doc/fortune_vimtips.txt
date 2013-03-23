@@ -60,6 +60,9 @@ No code but give the idea:
 
 HISTORY                                          fortune-vimtips-history
 
+0.6 ( 27 mar 2013 )
+- Fixed the duplicate tip on Vim
+
 0.5 ( 27 jan 2013 )
 - Add a new option to display the tip on a gvim tooltip
 
