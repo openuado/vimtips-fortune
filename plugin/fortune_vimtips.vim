@@ -21,6 +21,10 @@ if !exists('g:fortune_vimtips_display_in_tooltip')
     let g:fortune_vimtips_display_in_tooltip = 0
 endif
 
+if !exists('g:fortune_display_in_window')
+  let g:fortune_display_in_window = 1
+endif
+
 if &diff == 0 && g:fortune_vimtips_auto_display && !has("gui_running")
     au VIMEnter * call fortune_vimtips#viewtips()
 endif
