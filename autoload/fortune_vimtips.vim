@@ -35,7 +35,7 @@ function! fortune_vimtips#viewtips()
     let tip = split(get(s:fortunes, GetFortune()), "\n")
     call insert(tip, 'Did you know?', 0)
 
-    if g:fortune_display_in_window
+    if g:fortune_vimtips_display_in_window
         call fortune_vimtips#show_in_window(tip)
     else
         echomsg join(tip, ' ')
