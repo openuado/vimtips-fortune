@@ -5,7 +5,7 @@ let s:fortunecount = count(s:fortunes, "%") + 1
 let s:fortunestr = join(s:fortunes, "\n")
 let s:fortunes = split(s:fortunestr, "\n%\n")
 
-function! fortune_vimtips#viewtips()
+function! fortune_vimtips#show_in_window(tip) abort
     " Add a map to close more easy the window
     silent! nmap <unique> <silent> <Leader>o :only<CR>
 
@@ -25,11 +25,21 @@ function! fortune_vimtips#viewtips()
         silent exec win_nr . "wincmd w"
     endif
 
-    silent exec append(0, 'Did you know ?')
-    silent exec append(1, split(get(s:fortunes, GetFortune()), "\n"))
+    silent call append(0, a:tip)
     call cursor(1,1)
 
     silent exec win_restore . "wincmd w"
+endfunction
+
+function! fortune_vimtips#viewtips()
+    let tip = split(get(s:fortunes, GetFortune()), "\n")
+    call insert(tip, 'Did you know?', 0)
+
+    if g:fortune_vimtips_display_in_window
+        call fortune_vimtips#show_in_window(tip)
+    else
+        echomsg join(tip, ' ')
+    endif
 endfunction
 
 function! fortune_vimtips#tooltipviewtips()

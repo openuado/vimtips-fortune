@@ -36,6 +36,12 @@ Overview:
         (fortunes separated by lines containing a % character only) in the
         fortunes subdirectory of the plugin.
 
+                                              *g:fortune_vimtips_display_in_window*
+    |g:fortune_vimtips_display_in_window|      boolean ( default 1 )
+
+        Use this option to display the tip in a separate window.
+        If this option is 0 then tip will be echoed as message on start.
+
                                               *g:fortune_vimtips_display_in_tooltip*
     |g:fortune_vimtips_display_in_tooltip|      boolean ( default 0 )
 
