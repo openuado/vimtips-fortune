@@ -10,8 +10,6 @@ ci" inside a " " will erase everything between "" and place you in insertion mod
 %
 guu converts entire line to lowercase. gUU converts entire line to uppercase. ~ inverts case of current character.
 %
-'. jumps to last modified line. `. jumps to exact position of last modification.
-%
 <CTRL-o> : trace your movements backwards in a file. <CTRL-i> trace your movements forwards in a file.
 %
 :ju(mps) : list your movements {{help|jump-motions}}
@@ -92,11 +90,7 @@ ga will display the ASCII, hex, and octal value of the character under the curso
 %
 :r !date will insert the current date/time stamp (from the 'date' command -- a bit OS-specific).
 %
-ggguG will lower case the entire file (also known as the Jerry Yang treatment).
-%
 :lcd %:p:h will change to the directory of the current file.
-%
-:Sex will open a file explorer in a split window. I bet you'll remember that one.
 %
 % matches brackets {} [] (), and with matchit.vim, also matches def/end, < ?php/?>, < p>/< /p>, etc.
 %
@@ -704,8 +698,6 @@ gf -- open file name under cursor (SUPER)
 %
 ga -- display hex,ascii value of char under cursor
 %
-ggVGg? -- rot13 whole file
-%
 ggg?G -- rot13 whole file (quicker for large file)
 %
 :8 | normal VGg? -- rot13 from line 8
@@ -714,7 +706,7 @@ ggg?G -- rot13 whole file (quicker for large file)
 %
 <C-A>,<C-X> -- increment,decrement number under cursor
 %
-                                  win32 users must remap CNTRL-A
+win32 users must remap CNTRL-A
 %
 <C-R>=5*5 -- insert 25 into text (mini-calculator)
 %
@@ -732,10 +724,6 @@ ggVGg? -- rot13 whole file (toggles) -- disguise text (watch out) [N]
 %
 :%s/\(\<.\{-}\>\)/\=join(reverse(split(submatch(1), '.\zs')), '')/g -- reverse all text *N*
 %
-'. -- jump to last modification line (SUPER) -- History, Markers & moving about (what Vim Remembers) [C]
-%
-`. -- jump to exact spot in last modification line
-%
 g; -- cycle thru recent changes (oldest first)
 %
 g, -- reverse direction 
@@ -743,12 +731,6 @@ g, -- reverse direction
 :changes
 %
 :h changelist -- help for above
-%
-<C-O> -- retrace your movements in file (starting from most recent)
-%
-<C-I> -- retrace your movements in file (reverse direction)
-%
-:ju(mps) -- list of your movements
 %
 :help jump-motions
 %
@@ -1556,19 +1538,13 @@ After performing an undo, you can navigate through the changes using g- and g+. 
 %
 You probably know that 'u' is undo. Do you know that Ctrl-R is redo?
 %
-ci{ â change text inside {} block. Also see di{, yi{, ci( etc.
+ci{ â change text inside {} block. Also see di{, yi{, ci( etc.
 %
 :set autochdir instead of :lcd %:p:h in your vimrc to change directories upon opening a file.
 %
 :read [filename] will insert the contents of [filename] at the current cursor position 
 %
 to use gvim to edit your git messages set git's core editor as follows:
-%
-ci -- inside a -- " will erase everything between "" and place you in insertion mode.
-%
-<CTRL-o> -- trace your movements backwards in a file. <CTRL-i> trace your movements forwards in a file.
-%
-:ju(mps) -- list your movements {{help|jump-motions}}
 %
 :set foldmethod=syntax to make editing long files of code much easier.  zo to open a fold.  zc to close it.  See more
 %
